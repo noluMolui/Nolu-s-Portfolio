@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
+import motion from '../utils/motion'
 
 const Contact: React.FC = () => {
   const [focused, setFocused] = useState(false)

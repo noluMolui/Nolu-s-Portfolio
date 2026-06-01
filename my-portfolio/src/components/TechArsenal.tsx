@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react'
-import { motion, useMotionValue, useTransform } from 'framer-motion'
+import motion, { useMotionValue, useTransform } from '../utils/motion'
 
 type Skill = {
   id: string
@@ -22,7 +22,6 @@ const SKILL_GROUPS: SkillGroup[] = [
       { id: 'next', label: 'Next.js', group: 'fullstack' },
       { id: 'ts', label: 'TypeScript', group: 'fullstack' },
       { id: 'tailwind', label: 'Tailwind CSS', group: 'fullstack' },
-      { id: 'framer', label: 'Framer Motion', group: 'fullstack' },
     ]
   },
   {
@@ -30,8 +29,6 @@ const SKILL_GROUPS: SkillGroup[] = [
     description: 'Architecting robust backends, databases, and API layers that scale.',
     skills: [
       { id: 'node', label: 'Node.js', group: 'systems' },
-      { id: 'python', label: 'Python', group: 'systems' },
-      { id: 'db', label: 'Postgres/NoSQL', group: 'systems' },
       { id: 'api', label: 'API Architecture', group: 'systems' },
     ]
   },
@@ -59,9 +56,7 @@ const AnimatedSkillBubble: React.FC<{ skill: Skill; mouse: { x: any; y: any } }>
 
   return (
     <motion.div
-      className="flex-shrink-0"
-      whileHover={{ scale: 1.12 }}
-      transition={{ type: 'spring', stiffness: 100, damping: 18 }}
+      className="flex-shrink-0" whileHover={{ scale: 1.12 }} transition={{ type: 'spring', stiffness: 100, damping: 18 }}
     >
       <motion.button
         className="px-4 py-2 rounded-full bg-gradient-to-r from-emerald/20 to-neonpurple/20 border border-emerald/50 text-sm text-crisp font-medium hover:shadow-neon transition-shadow"
