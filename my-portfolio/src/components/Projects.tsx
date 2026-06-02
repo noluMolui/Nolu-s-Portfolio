@@ -17,7 +17,7 @@ const PROJECTS: Project[] = [
     title: 'ForgeSetup (Full-Stack Application)', 
     desc: 'A full-stack developer workspace application built with a React/Vite frontend and a Node.js/Express backend. Features seamless integration with the Google Gemini API to deliver real-time, intelligent developer assistance and automated project workflows. Securely backed by a cloud database architecture using MongoDB Atlas and fully deployed across Vercel and Render using automated CI/CD pipelines.', 
     tags: ['React', 'Node', 'Postgres'],
-    liveUrl: 'hhttps://nolu-foege-set-up.vercel.app/' 
+    liveUrl: 'https://nolu-foege-set-up.vercel.app/' 
   },
   { 
     id: 'HustleFlow-Job application tracker75day', 
